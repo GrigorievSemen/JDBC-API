@@ -9,7 +9,8 @@ spring:
   h2:
     console:
       enabled: true
-  sql:
-    init:
-      continue-on-error: true
-
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    generate-ddl: true
