@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@org.springframework.data.relational.core.mapping.Table(name = "orders")
+@Table(name = "orders")
 @Entity
 public class Order {
     @Id
@@ -22,8 +22,8 @@ public class Order {
     @Column(columnDefinition = "timestamp default now()", nullable = false)
     @CreatedDate
     private LocalDate date;
-    @Column(name = "customer_id",nullable = false)
     @ManyToOne
+    @JoinColumn(name = "customer_id")
     Customer customer;
     @Column(nullable = false)
     private String product_name;

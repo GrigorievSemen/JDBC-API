@@ -1,4 +1,4 @@
-INSERT INTO test.CUSTOMERS (name, surname, age, phone_number)
+INSERT INTO CUSTOMERS (name, surname, age, phone_number)
 VALUES ('Алексей', 'Петров', 26, '8-654-6541-9871'),
        ('Аня', 'Петров', 24, '5-4325-4657-4563'),
        ('Витя', 'Ромашкин', 56, '6-465-4978-4321'),
@@ -6,7 +6,7 @@ VALUES ('Алексей', 'Петров', 26, '8-654-6541-9871'),
        ('Роман', 'Козюлин', 55, '3-654-654-2451'),
        ('Оля', 'Резанцова', 18, '5-654-4571-987');
 
-INSERT INTO test.ORDERS (date, customer_id, product_name, amount)
+INSERT INTO ORDERS (date, customer_id, product_name, amount)
 VALUES ('2023-03-01 12:45:00', 1, 'Часы', 2999),
        ('2023-03-01 13:32:00', 2, 'Телефон', 20500),
        ('2023-03-01 18:48:00', 3, 'Книга', 400),

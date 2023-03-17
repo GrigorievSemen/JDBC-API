@@ -1,13 +1,10 @@
 package ru.grigoriev.java_data_jdbc.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.relational.core.mapping.Table;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @Builder
@@ -27,6 +24,8 @@ public class Customer implements Serializable {
     private int age;
     @Column(nullable = false)
     private String phone_number;
-    @OneToMany
-    private Order order;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id")
+    @ToString.Exclude
+    private List<Order> orderList;
 }
